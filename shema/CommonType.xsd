@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified">
+    <xs:complexType name="CT_Point">
+        <xs:attribute name="x" type="xs:unsignedInt" default="0" />
+        <xs:attribute name="y" type="xs:unsignedInt" default="0" />
+    </xs:complexType>
+    <xs:complexType name="CT_Matrix">
+        <xs:attribute name="a" type="xs:float" default="1" />
+        <xs:attribute name="b" type="xs:float" default="0" />
+        <xs:attribute name="c" type="xs:float" default="0" />
+        <xs:attribute name="d" type="xs:float" default="1" />
+        <xs:attribute name="tx" type="xs:float" default="0" />
+        <xs:attribute name="ty" type="xs:float" default="0" />
+    </xs:complexType>
+</xs:schema>

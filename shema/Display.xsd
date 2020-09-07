@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified">
+    <xs:include schemaLocation="CommonType.xsd" />
+    <xs:complexType name="CT_DisplayObject">
+        <xs:attribute name="id" type="xs:ID" />
+        <xs:attribute name="position" type="CT_Point" />
+        <xs:attribute name="localTransform" type="CT_Matrix" />
+        <xs:attribute name="worldTransform" type="CT_Matrix" />
+        <xs:attribute name="zIndex" type="xs:unsignedInt"/>
+        <xs:attribute name="width" type="xs:unsignedInt"/>
+        <xs:attribute name="height" type="xs:unsignedInt"/>
+    </xs:complexType>
+    <xs:complexType name="CT_Image">
+        <xs:complexContent>
+            <xs:extension base="CT_DisplayObject">
+                <xs:attribute name="src" type="xs:string" />
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="CT_DisplayObjectContainer">
+        <xs:sequence>
+            <xs:element name="image" type="CT_DisplayObject" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
